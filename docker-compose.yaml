@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+
+  es:
+    build: .
+    user: '1000' # elasticsearch does not allow root users
+    ports:
+      - 9200:9200
+      - 9300:9300
+    expose:
+      - 9200
+      - 9300
